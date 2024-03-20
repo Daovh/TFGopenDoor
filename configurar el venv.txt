@@ -1,0 +1,68 @@
+Para agregar Python al PATH del sistema de forma manual en Windows, sigue estos pasos:
+
+1. **Buscar la configuración avanzada del sistema:**
+   - Haz clic derecho en el icono de "Este PC" o "Mi PC" en el escritorio o en el Explorador de archivos.
+   - Selecciona "Propiedades".
+   - En la ventana de propiedades del sistema, haz clic en "Configuración avanzada del sistema" en el panel izquierdo.
+
+2. **Abrir la configuración de variables de entorno:**
+   - En la ventana de Propiedades del sistema, haz clic en el botón "Variables de entorno" en la pestaña "Opciones avanzadas".
+
+3. **Editar el PATH del sistema:**
+   - En la sección "Variables del sistema", busca la variable llamada "PATH" en la lista.
+   - Selecciona la variable "PATH" y haz clic en el botón "Editar..." debajo de la lista de variables del sistema.
+
+4. **Agregar la ruta de Python al PATH:**
+   - Haz clic en "Nuevo" y añade la ruta donde está instalado Python. Por lo general, es algo como `C:\PythonXX` (donde "XX" es la versión de Python).
+   - Si tienes varias versiones de Python instaladas, asegúrate de agregar la ruta de la versión que quieres usar.
+
+5. **Guardar los cambios:**
+   - Después de agregar la ruta de Python al PATH, haz clic en "Aceptar" en todas las ventanas abiertas para guardar los cambios.
+
+Una vez completados estos pasos, Python estará agregado al PATH del sistema y podrás usarlo desde cualquier ubicación en la línea de comandos. Ahora puedes volver a Visual Studio Code y crear el entorno virtual utilizando el comando `python -m venv venv_name` en la terminal integrada.
+
+[70]
+
+To create a virtual environment (venv) in Visual Studio Code via the terminal, you can follow these steps:
+
+1. Open Visual Studio Code.
+2. Open your project folder in Visual Studio Code.
+3. Open the integrated terminal by selecting Terminal > New Terminal from the top menu, or by pressing Ctrl+` (backtick).
+
+In the terminal, navigate to your project directory if you're not already there, then execute the following command:
+
+```bash
+python -m venv TFGopenDoor_311_venv
+```
+
+Replace `venv_name` with the name you want to give to your virtual environment.
+
+Once the command executes, the virtual environment will be created in your project directory. You can then activate the virtual environment and start using it. 
+
+To activate the virtual environment on Windows, use:
+
+.\TFGopenDoor_311_venv\Scripts\activate
+
+
+
+On macOS/Linux, use:
+
+```bash
+source venv_name/bin/activate
+```
+
+After activation, you'll see the name of the virtual environment in your terminal prompt, indicating that you are now working within the virtual environment. From there, you can install packages using `pip`.
+
+[90]
+
+
+
+
+
+
+
+
+
+python -m venv TFGopenDoor_311_venv
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+.\TFGopenDoor_311_venv\Scripts\activate
